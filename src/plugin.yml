@@ -1,12 +1,12 @@
-name: ProjectKorra
-author: ProjectKorra
+name: projectkorra
+author: projectkorra
 api-version: 1.16
 version: ${project.version}
 main: com.projectkorra.projectkorra.ProjectKorra
 softdepend: [GriefDefender, WorldGuard, WorldEdit, Factions, GriefPrevention, Towny, NoCheatPlus, LWC, Residence, RedProtect, PlaceholderAPI, Lands]
 commands:
-  projectkorra:
-    aliases: [b,bending,mtla,tla,korra,pk,bend]
+  elementalpowers:
+    aliases: [elements, ep]
     usage: /<command>
 permissions:
   bending.admin:
@@ -63,14 +63,14 @@ permissions:
       bending.water: true
       bending.earth: true
       bending.fire: true
-      bending.chi: true
+      bending.chi: false
   bending.air:
     default: true
     description: Grants access to all airbending abilities.
     children:
       bending.command.add.air: true
       bending.command.choose.air: true
-      bending.ability.AirBlast: true 
+      bending.ability.AirBlast: true
       bending.ability.AirBurst: true
       bending.ability.AirScooter: true
       bending.ability.AirShield: true
@@ -190,14 +190,14 @@ permissions:
     default: false
     description: Lets a Metalbending throw a controlled entity.
   bending.ability.AirCombo:
-    default: false
+    default: true
     description: Grants access to all AirCombos.
     children:
       bending.ability.AirSweep: true
       bending.ability.AirStream: true
       bending.ability.Twister: true
   bending.ability.Flight:
-    default: false
+    default: true
     description: Grants access to Flight sub-abilities.
     children:
       bending.ability.Flight.Soar: true
@@ -205,7 +205,7 @@ permissions:
       bending.ability.Flight.Levitate: true
       bending.ability.Flight.Ending: true
   bending.ability.WaterCombo:
-    default: false
+    default: true
     description: Grants access to all WaterCombos.
     children:
       bending.ability.IceWave: true
@@ -213,7 +213,7 @@ permissions:
       bending.ability.IceBulletLeftClick: true
       bending.ability.IceBulletRightClick: true
   bending.ability.EarthCombo:
-    default: false
+    default: true
     description: Grants access to all EarthCombos.
     children:
       bending.ability.EarthPillars: true
@@ -234,7 +234,7 @@ permissions:
     children:
       bending.ability.Immobilize: true
   bending.air.passive:
-    default: false
+    default: true
     description: Grants access to all air passives.
     children:
       bending.ability.AirAgility: true
@@ -248,17 +248,17 @@ permissions:
       bending.ability.ChiAgility: true
       bending.ability.ChiSaturation: true
   bending.earth.passive:
-    default: false
+    default: true
     description: Grants access to all earth passives.
     children:
       bending.ability.DensityShift: true
       bending.ability.SandAgility: true
   bending.fire.passive:
-    default: false
+    default: true
     description: Grants access to all fire passives.
     children:
   bending.water.passive:
-    default: false
+    default: true
     description: Grants access to all water passives.
     children:
       bending.ability.FastSwim: true
